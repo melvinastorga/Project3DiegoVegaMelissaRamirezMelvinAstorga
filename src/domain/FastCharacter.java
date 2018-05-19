@@ -9,6 +9,6 @@ package domain;
  *
  * @author Melissa Ramírez R
  */
-public class Fast {
+public class FastCharacter {
     
 }

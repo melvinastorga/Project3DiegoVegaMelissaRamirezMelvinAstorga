@@ -18,10 +18,10 @@ public class Maze {
         this.mazeMatrix = mazeMatrix;
     }
     public Maze() {
-        this.row = row;
-        this.colums = colums;
-        this.imageWall = imageWall;
-        this.mazeMatrix = mazeMatrix;
+        this.row = 0;
+        this.colums =0;
+        this.imageWall =null;
+        this.mazeMatrix = null;
     }
 
     public int getRow() {
