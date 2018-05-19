@@ -6,14 +6,14 @@ import java.util.ArrayList;
 
 public class Character extends Thread{
 
- int positionX;
- int positionY;        
- Image playerImage;
- ArrayList<Image> sprite;
- Object [][] path;
- String playerName;
- String type;
- int speed;  
+ private int positionX;
+ private int positionY;        
+ private Image playerImage;
+ private ArrayList<Image> sprite;
+ private Object [][] path;
+ private String playerName;
+ private String type;
+ private int speed;  
 
     public Character(int positionX, int positionY, Image playerImage, ArrayList<Image> sprite, Object[][] path, String name, String type, int speed) {
         this.positionX = positionX;
@@ -24,6 +24,16 @@ public class Character extends Thread{
         this.playerName = name;
         this.type = type;
         this.speed = speed;
+    }
+    public Character() {
+        this.positionX = 0;
+        this.positionY = 0;
+        this.playerImage = null;
+        this.sprite = null;
+        this.path = null;
+        this.playerName = "";
+        this.type = "";
+        this.speed = 0;
     }
 
     public int getPositionX() {
