@@ -66,12 +66,12 @@ public class Character extends Thread{
         this.path = path;
     }
 
-    public String getName() {
+    public String getPlayerName() {
         return playerName;
     }
 
-    public void setName(String name) {
-        this.playerName = name;
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
     }
 
     public String getType() {
