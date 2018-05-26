@@ -5,10 +5,19 @@
  */
 package domain;
 
-/**
- *
- * @author Melissa Ramírez R
- */
 public class FuriousCharacter {
-    
+
+    private boolean attack;
+
+    public FuriousCharacter(boolean attack) {
+        this.attack = attack;
+    }
+
+    public boolean isAttack() {
+        return attack;
+    }
+
+    public void setAttack(boolean attack) {
+        this.attack = attack;
+    }
 }
