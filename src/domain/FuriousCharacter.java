@@ -20,4 +20,5 @@ public class FuriousCharacter {
     public void setAttack(boolean attack) {
         this.attack = attack;
     }
+
 }

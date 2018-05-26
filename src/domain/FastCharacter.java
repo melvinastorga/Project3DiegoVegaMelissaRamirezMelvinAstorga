@@ -8,9 +8,13 @@ package domain;
 /**
  *
  * @author Melissa Ramírez R
+<<<<<<< HEAD
  */
 
-public class FastCharacter {
+
+
+ public class FastCharacter {
+
    private int percentage;
 
     public FastCharacter(int percentage) {
@@ -23,5 +27,7 @@ public class FastCharacter {
 
     public void setPercentage(int percentage) {
         this.percentage = percentage;
+
     }
 }
+    
