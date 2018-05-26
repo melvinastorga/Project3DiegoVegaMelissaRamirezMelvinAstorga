@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Melvin/Documents/NetBeansProjects/Project3_MazeThreads_DiegoVega_MelissaRamirez_MelvinAstorga/src/project3_mazethreads_diegovega_melissaramirez_melvinastorga/Project3_MazeThreads_DiegoVega_MelissaRamirez_MelvinAstorga.java</file>
+            <file>file:/C:/Users/Melvin/Desktop/repositoryProject3Progra2/src/gameInterface/MainInterface.java</file>
+            <file>file:/C:/Users/Melvin/Desktop/repositoryProject3Progra2/src/gameInterface/MazeInterface.java</file>
+            <file>file:/C:/Users/Melvin/Desktop/repositoryProject3Progra2/src/gameInterface/CharacterSelection.java</file>
+            <file>file:/C:/Users/Melvin/Desktop/repositoryProject3Progra2/src/domain/FastCharacter.java</file>
+            <file>file:/C:/Users/Melvin/Desktop/repositoryProject3Progra2/src/domain/Item.java</file>
+            <file>file:/C:/Users/Melvin/Desktop/repositoryProject3Progra2/src/gameInterface/PrinciplalMenu.java</file>
+            <file>file:/C:/Users/Melvin/Desktop/repositoryProject3Progra2/src/domain/FuriousCharacter.java</file>
         </group>
     </open-files>
 </project-private>
