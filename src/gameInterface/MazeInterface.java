@@ -29,8 +29,9 @@ public class MazeInterface extends javax.swing.JFrame {
        
         initComponents();
         BufferedImage img= ImageIO.read(new File("wall.jpg"));
-        Maze m1= new Maze(20, 20, img);
-        MazeEasy m = new MazeEasy(m1);
+        Maze m1= new Maze(10, 10, img);
+        String level="";
+        MazeEasy m = new MazeEasy(m1, level);
         jPanel1.add(m);
         m.repaint();
      

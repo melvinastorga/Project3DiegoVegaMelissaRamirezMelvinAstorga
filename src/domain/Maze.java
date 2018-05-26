@@ -13,7 +13,6 @@ public class Maze{
   private int row;
   private int colums;
   private BufferedImage imageWall;  
-  private Rectangle2D mazeMatrix;
   private int [][] mazeItems;
 
     public Maze(int row, int colums, BufferedImage imageWall) {
@@ -80,6 +79,9 @@ public class Maze{
             
         }
        
+        mazeFilled[0][0]=3;
+        mazeFilled[9][9]=3;
+        
         return mazeFilled;
     }
     
