@@ -3,30 +3,29 @@ package domain;
 
 import java.awt.Image;
 import java.awt.geom.Rectangle2D;
+import java.awt.image.BufferedImage;
 import java.util.Random;
 import javax.swing.JPanel;
 
 
-public class Maze extends JPanel{
+public class Maze{
 
   private int row;
   private int colums;
-  private Image imageWall;  
+  private BufferedImage imageWall;  
   private Rectangle2D mazeMatrix;
   private int [][] mazeItems;
 
-    public Maze(int row, int colums, Image imageWall, Rectangle2D mazeMatrix) {
+    public Maze(int row, int colums, BufferedImage imageWall) {
         this.row = row;
         this.colums = colums;
         this.imageWall = imageWall;
-        this.mazeMatrix = mazeMatrix;
         this.mazeItems = new int[row][colums];
     }
     public Maze() {
         this.row = 0;
         this.colums = 0;
         this.imageWall = null;
-        this.mazeMatrix = null;
         this.mazeItems = null;
     }
 
@@ -46,20 +45,12 @@ public class Maze extends JPanel{
         this.colums = colums;
     }
 
-    public Image getImageWall() {
+    public BufferedImage getImageWall() {
         return imageWall;
     }
 
-    public void setImageWall(Image imageWall) {
+    public void setImageWall(BufferedImage imageWall) {
         this.imageWall = imageWall;
-    }
-
-    public Rectangle2D getMazeMatrix() {
-        return mazeMatrix;
-    }
-
-    public void setMazeMatrix(Rectangle2D mazeMatrix) {
-        this.mazeMatrix = mazeMatrix;
     }
 
     public int[][] getMazeItems() {
