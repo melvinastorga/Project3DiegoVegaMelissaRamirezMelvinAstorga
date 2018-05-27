@@ -23,7 +23,7 @@ public class MazeEasy extends JPanel implements MouseListener{
     
     public MazeEasy(Maze maze, String level) {
         addMouseListener(this);
-        this.setSize(800, 800);
+        this.setSize(1000,1800);
         this.mazeLevels = maze;
         this.mazeStructure=new Rectangle2D[mazeLevels.getColums()][mazeLevels.getRow()];
         num= mazeLevels.fillMaze();
