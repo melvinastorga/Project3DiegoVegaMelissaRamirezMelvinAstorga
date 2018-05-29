@@ -104,7 +104,7 @@ public class MazeInterface extends javax.swing.JFrame {
         BufferedImage img  = ImageIO.read(new File("wall.jpg"));
         String gameLevel =jTextField1.getText();
         BufferedImage doors = ImageIO.read(new File("door.png"));
-        BufferedImage exit = ImageIO.read(new File("salida.png"));
+        BufferedImage exit = ImageIO.read(new File("door.gif"));
        
         int mazeSize=0;
         int mazeLevel=0;
@@ -124,7 +124,7 @@ public class MazeInterface extends javax.swing.JFrame {
             mazeLevel=11;
             mazeWidth=750;
             mazeHight=850;
-             img  = ImageIO.read(new File("ice.png"));
+             img  = ImageIO.read(new File("ice.jpg"));
         }else{
             mazeSize=15;
             mazeLevel=10;

@@ -86,7 +86,7 @@ public class MazeLevels extends JPanel implements MouseListener {
 
                 if (num[i][j] == 4) {
 
-                    g2.drawImage(mazeBuilder.getDoor(), startX, startY, calculateX, calculateY, this);
+                    g2.drawImage(mazeBuilder.getExit(), startX, startY, calculateX, calculateY, this);
                 }
 
                 startX = startX + calculateX;
