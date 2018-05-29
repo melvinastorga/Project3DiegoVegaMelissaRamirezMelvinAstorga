@@ -14,18 +14,21 @@ public class Maze{
   private int colums;
   private BufferedImage imageWall;  
   private int [][] mazeItems;
+  private boolean hardMode;
 
-    public Maze(int row, int colums, BufferedImage imageWall) {
+    public Maze(int row, int colums, BufferedImage imageWall,boolean hardMode) {
         this.row = row;
         this.colums = colums;
         this.imageWall = imageWall;
         this.mazeItems = new int[row][colums];
+        this.hardMode= hardMode;
     }
     public Maze() {
         this.row = 0;
         this.colums = 0;
         this.imageWall = null;
         this.mazeItems = null;
+        this.hardMode = false;
     }
 
     public int getRow() {
@@ -60,8 +63,15 @@ public class Maze{
         this.mazeItems = mazeItems;
     }
 
-    
+    public boolean isHardMode() {
+        return hardMode;
+    }
 
+    public void setHardMode(boolean hardMode) {
+        this.hardMode = hardMode;
+    }
+
+     
  
 
     
@@ -79,8 +89,20 @@ public class Maze{
             
         }
        
+        
+        
+        if(hardMode==true){
         mazeFilled[0][0]=3;
-        mazeFilled[9][9]=3;
+        mazeFilled[0][mazeItems.length-1]=3;
+        
+        mazeFilled[mazeItems.length-1][mazeItems.length-5]=4;
+        mazeFilled[mazeItems.length-1][mazeItems.length-8]=4;
+        
+        }else{
+        mazeFilled[0][0]=3;
+        mazeFilled[mazeItems.length-1][mazeItems.length-1]=4;
+            
+        }
         
         return mazeFilled;
     }
