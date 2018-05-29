@@ -7,14 +7,12 @@ package gameInterface;
 
 import domain.MazeLevels;
 import domain.Maze;
-import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
-import javax.swing.JPanel;
 
 /**
  *
@@ -103,7 +101,6 @@ public class MazeInterface extends javax.swing.JFrame {
        
         try {
         BufferedImage img  = ImageIO.read(new File("wall.jpg"));
-       boolean activateHardMode= false;
         String gameLevel =jTextField1.getText();
        
         int mazeSize=0;
@@ -116,7 +113,7 @@ public class MazeInterface extends javax.swing.JFrame {
             mazeLevel=12;
             mazeWidth=733;
             mazeHight=903;
-        activateHardMode = true;
+        
          
         }else if(gameLevel.equalsIgnoreCase("normal")){
             mazeSize=22;
@@ -124,13 +121,13 @@ public class MazeInterface extends javax.swing.JFrame {
             mazeWidth=720;
             mazeHight=820;
         }else{
-            mazeSize=30;
-            mazeLevel=8;
-            mazeWidth=640;
-            mazeHight=740;
+            mazeSize=15;
+            mazeLevel=10;
+            mazeWidth=650;
+            mazeHight=750;
         }
         
-        Maze m1 = new Maze(mazeLevel, mazeLevel, img, activateHardMode);
+        Maze m1 = new Maze(mazeLevel, mazeLevel, img, gameLevel);
         MazeLevels m = new MazeLevels(m1, mazeSize,mazeWidth,mazeHight);
         jPanel1.setSize(m.getWidth(), m.getWidth());
         jPanel1.add(m);
