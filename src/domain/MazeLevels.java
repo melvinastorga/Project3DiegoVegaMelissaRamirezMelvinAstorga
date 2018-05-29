@@ -8,6 +8,7 @@ import java.awt.RenderingHints;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.geom.Rectangle2D;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -21,6 +22,8 @@ public class MazeLevels extends JPanel implements MouseListener {
     Rectangle2D[][] mazeStructure;
     int[][] num;
     int mazeLevel;
+    
+    
 
     public MazeLevels(Maze maze, int level, int width, int hight) {
         addMouseListener(this);
@@ -57,8 +60,7 @@ public class MazeLevels extends JPanel implements MouseListener {
         int startY = 0;
         int startX = 0;
 
-        Image doors = ImageIO.read(new File("door.png"));
-        Image exit = ImageIO.read(new File("salida.png"));
+      
 
         for (int i = 0; i < mazeBuilder.fillMaze().length; i++) {
 
@@ -69,6 +71,7 @@ public class MazeLevels extends JPanel implements MouseListener {
                 g2.draw(mazeStructure[i][j]);
                 g2.setPaint(Color.black);
                 g2.fill(mazeStructure[i][j]);
+              
 
                 if (num[i][j] == 1) {
 
@@ -78,12 +81,12 @@ public class MazeLevels extends JPanel implements MouseListener {
 
                 if (num[i][j] == 3) {
 
-                    g2.drawImage(doors, startX, startY, calculateX, calculateY, this);
+                    g2.drawImage(mazeBuilder.getDoor(), startX, startY, calculateX, calculateY, this);
                 }
 
                 if (num[i][j] == 4) {
 
-                    g2.drawImage(exit, startX, startY, calculateX, calculateY, this);
+                    g2.drawImage(mazeBuilder.getDoor(), startX, startY, calculateX, calculateY, this);
                 }
 
                 startX = startX + calculateX;
@@ -102,6 +105,7 @@ public class MazeLevels extends JPanel implements MouseListener {
         System.out.println(e.getX());
         for (int i = 0; i < mazeStructure.length; i++) {
             for (int j = 0; j < mazeStructure.length; j++) {
+                System.out.println(num);
                 if (mazeStructure[i][j].contains(cordenatesX, cordenatesY)) {
 
                     if (num[i][j] == 1) {

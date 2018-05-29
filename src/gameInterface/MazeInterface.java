@@ -7,6 +7,7 @@ package gameInterface;
 
 import domain.MazeLevels;
 import domain.Maze;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -102,6 +103,8 @@ public class MazeInterface extends javax.swing.JFrame {
         try {
         BufferedImage img  = ImageIO.read(new File("wall.jpg"));
         String gameLevel =jTextField1.getText();
+        BufferedImage doors = ImageIO.read(new File("door.png"));
+        BufferedImage exit = ImageIO.read(new File("salida.png"));
        
         int mazeSize=0;
         int mazeLevel=0;
@@ -116,10 +119,10 @@ public class MazeInterface extends javax.swing.JFrame {
         
          
         }else if(gameLevel.equalsIgnoreCase("normal")){
-            mazeSize=22;
-            mazeLevel=10;
-            mazeWidth=720;
-            mazeHight=820;
+            mazeSize=15;
+            mazeLevel=11;
+            mazeWidth=750;
+            mazeHight=850;
         }else{
             mazeSize=15;
             mazeLevel=10;
@@ -127,7 +130,7 @@ public class MazeInterface extends javax.swing.JFrame {
             mazeHight=750;
         }
         
-        Maze m1 = new Maze(mazeLevel, mazeLevel, img, gameLevel);
+        Maze m1 = new Maze(mazeLevel, mazeLevel, img, gameLevel,doors,exit);
         MazeLevels m = new MazeLevels(m1, mazeSize,mazeWidth,mazeHight);
         jPanel1.setSize(m.getWidth(), m.getWidth());
         jPanel1.add(m);

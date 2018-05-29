@@ -13,13 +13,17 @@ public class Maze {
     private BufferedImage imageWall;
     private int[][] mazeItems;
     private String MazeLevel;
+    private BufferedImage door;
+    private BufferedImage exit;
 
-    public Maze(int row, int colums, BufferedImage imageWall, String hardMode) {
+    public Maze(int row, int colums, BufferedImage imageWall, String hardMode, BufferedImage door, BufferedImage exit) {
         this.row = row;
         this.colums = colums;
         this.imageWall = imageWall;
         this.mazeItems = new int[row][colums];
         this.MazeLevel = hardMode;
+        this.door= door;
+        this.exit= exit;
     }
 
     public Maze() {
@@ -70,6 +74,25 @@ public class Maze {
         this.MazeLevel = MazeLevel;
     }
 
+    public BufferedImage getDoor() {
+        return door;
+    }
+
+    public void setDoor(BufferedImage door) {
+        this.door = door;
+    }
+
+    public BufferedImage getExit() {
+        return exit;
+    }
+
+    public void setExit(BufferedImage exit) {
+        this.exit = exit;
+    }
+    
+    
+    
+
     public int[][] fillMaze() {
 
         if (MazeLevel.equalsIgnoreCase("easy")) {
@@ -89,19 +112,39 @@ public class Maze {
             return mazeFilled;
         }
         if (MazeLevel.equalsIgnoreCase("normal")) {
-            int[][] mazeFilled = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
-
+            int[][] mazeFilled = {
+            {3, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1},
+            {1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0},
+            {1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1},
+            {1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1},
+            {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+            {1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0},
+            {1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0},
+            {1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
+            {1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1},
+            {1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0},
+            {1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 4}
+            };
             return mazeFilled;
         }
 
         if (MazeLevel.equalsIgnoreCase("hard")) {
 
-            int[][] mazeFilled = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
-
-            mazeFilled[0][0] = 3;
-            mazeFilled[0][mazeItems.length - 1] = 3;
-            mazeFilled[mazeItems.length - 1][mazeItems.length - 5] = 4;
-            mazeFilled[mazeItems.length - 1][mazeItems.length - 8] = 4;
+            int[][] mazeFilled = {
+            {3, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 3},
+            {1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1},
+            {1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
+            {1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0},
+            {1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0},
+            {1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1},
+            {1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0},
+            {1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1},
+            {1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0},
+            {1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1},
+            {0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1},
+            {1, 1, 1, 4, 0, 1, 1, 4, 1, 1, 0, 0},
+            
+            };
             return mazeFilled;
         }
         return null;

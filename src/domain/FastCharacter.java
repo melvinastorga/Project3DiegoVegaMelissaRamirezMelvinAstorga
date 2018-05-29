@@ -8,7 +8,7 @@ package domain;
 /**
  *
  * @author Melissa Ramírez R
-<<<<<<< HEAD
+
  */
 
 
