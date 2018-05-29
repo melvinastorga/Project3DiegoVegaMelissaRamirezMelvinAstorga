@@ -67,7 +67,7 @@ public class MazeLevels extends JPanel implements MouseListener {
                 mazeStructure[i][j] = new Rectangle2D.Double(startX, startY, calculateX, calculateY);
 
                 g2.draw(mazeStructure[i][j]);
-                g2.setPaint(Color.GREEN);
+                g2.setPaint(Color.black);
                 g2.fill(mazeStructure[i][j]);
 
                 if (num[i][j] == 1) {
