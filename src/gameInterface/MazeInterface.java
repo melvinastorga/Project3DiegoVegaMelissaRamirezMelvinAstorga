@@ -116,13 +116,15 @@ public class MazeInterface extends javax.swing.JFrame {
             mazeLevel=12;
             mazeWidth=733;
             mazeHight=903;
-        
+            
+          img  = ImageIO.read(new File("lava.gif"));
          
         }else if(gameLevel.equalsIgnoreCase("normal")){
             mazeSize=15;
             mazeLevel=11;
             mazeWidth=750;
             mazeHight=850;
+             img  = ImageIO.read(new File("ice.png"));
         }else{
             mazeSize=15;
             mazeLevel=10;
