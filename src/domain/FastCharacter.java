@@ -5,6 +5,9 @@
  */
 package domain;
 
+import java.awt.Image;
+import java.util.ArrayList;
+
 /**
  *
  * @author Melissa Ramírez R
@@ -13,12 +16,34 @@ package domain;
 
 
 
- public class FastCharacter {
+ public class FastCharacter extends Character {
 
    private int percentage;
 
+   
+   
+//    public FastCharacter(int percentage) {
+//        this.percentage = percentage;
+//    }
+//
+//    public int getPercentage() {
+//        return percentage;
+//    }
+//
+//    public void setPercentage(int percentage) {
+//        this.percentage = percentage;
+
+    //}
+
+    public FastCharacter(int percentage, int positionX, int positionY, Image playerImage, ArrayList<Image> sprite, Object[][] path, String name, String type, int speed) {
+        super(positionX, positionY, playerImage, sprite, path, name, type, speed);
+        this.percentage = percentage;
+    }
+
     public FastCharacter(int percentage) {
         this.percentage = percentage;
+        
+        
     }
 
     public int getPercentage() {
@@ -27,7 +52,8 @@ package domain;
 
     public void setPercentage(int percentage) {
         this.percentage = percentage;
-
     }
+    
+    
 }
     
