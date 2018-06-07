@@ -77,14 +77,17 @@ super.setSize(dim);
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
         jLabel1.setText("Fash");
 
-        jButton2.setText("jButton2");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Policia/1_police_Run_000.png"))); // NOI18N
 
+        jLabel2.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
         jLabel2.setText("Furious");
 
-        jButton3.setText("jButton3");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Marciano/red__0000_idle_1.png"))); // NOI18N
 
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel3.setText("Smarth");
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Santa/Run (1).png"))); // NOI18N
@@ -127,7 +130,7 @@ super.setSize(dim);
                         .addComponent(jButton3)
                         .addGap(48, 48, 48)
                         .addComponent(jLabel3)
-                        .addGap(39, 39, 39)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton4))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()

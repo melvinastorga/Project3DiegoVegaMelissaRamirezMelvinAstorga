@@ -6,9 +6,14 @@
             <file>file:/C:/Users/Melvin/Desktop/Proyecto3MazeThread/src/gameInterface/PrinciplalMenu.java</file>
             <file>file:/C:/Users/Melvin/Desktop/Proyecto3MazeThread/src/gameInterface/MazeInterface.java</file>
             <file>file:/C:/Users/Melvin/Desktop/Proyecto3MazeThread/src/domain/Maze.java</file>
+            <file>file:/C:/Users/Melvin/Desktop/Proyecto3MazeThread/src/domain/Player.java</file>
+            <file>file:/C:/Users/Melvin/Desktop/Proyecto3MazeThread/src/domain/MazeLevels.java</file>
+            <file>file:/C:/Users/Melvin/Desktop/Proyecto3MazeThread/src/domain/FastCharacter.java</file>
             <file>file:/C:/Users/Melvin/Desktop/Proyecto3MazeThread/src/gameInterface/CharacterSelection.java</file>
             <file>file:/C:/Users/Melvin/Desktop/Proyecto3MazeThread/src/gameInterface/MainInterface.java</file>
             <file>file:/C:/Users/Melvin/Desktop/Proyecto3MazeThread/src/domain/Character.java</file>
+            <file>file:/C:/Users/Melvin/Desktop/Proyecto3MazeThread/src/domain/SmartCharacter.java</file>
+            <file>file:/C:/Users/Melvin/Desktop/Proyecto3MazeThread/src/domain/FuriousCharacter.java</file>
         </group>
     </open-files>
 </project-private>
